@@ -3,9 +3,12 @@ const
     app = express(),
     PORT = 3000;
 
-
 //Application Routes
 //get, put, update, delete
+//app.get(<route>, <ANON FXN>) //Handle an incoming request from the browser to a port on the computer
+// (req, res) => {
+// res.send({});
+// }
 
 app.get('/', function (req, res) {
     res.send({
@@ -36,15 +39,6 @@ app.get('*', function (req, res) {
         CatchAll: '404 not found.'
     })
 });
-//app.get(<route>, <ANON FXN>) //Handle an incoming request from the browser to a port on the computer
-// (req, res) => {
-// res.send({});
-// }
-
-
-
-
-
 
 //Start the app
 app.listen(PORT, () => {
